@@ -84,7 +84,7 @@ const TrackMembersPage = () => {
     if (!memberToDelete) return;
     setDeleting(true);
     try {
-      await axiosInstance.delete(`/students/${memberToDelete.id}/`);
+      await axiosInstance.delete(`/students/${memberToDelete.id}`);
       setMembers((prev) => prev.filter((m) => m.id !== memberToDelete.id));
       setDeleteModalOpen(false);
       setMemberToDelete(null);
