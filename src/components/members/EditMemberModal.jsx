@@ -35,7 +35,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
         club: member.club || "",
         title: member.title || "",
         user: {
-          id: member.user?.id || "",
+          id: member.user?.id,
           first_name: member.user?.first_name || "",
           last_name: member.user?.last_name || "",
           email: member.user?.email || "",
@@ -330,3 +330,4 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
 };
 
 export default EditMemberModal;
+
