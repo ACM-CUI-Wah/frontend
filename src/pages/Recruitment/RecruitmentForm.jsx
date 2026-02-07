@@ -320,7 +320,6 @@ const RecruitmentForm = () => {
       "preferredRole",
       "secondaryRole",
       "whyJoin",
-      "availability",
     ];
 
     const filledFields = requiredFields.filter(
