@@ -414,7 +414,7 @@ const RecruitmentForm = () => {
         preferred_role: formData.preferredRole,
         secondary_role: formData.secondaryRole,
         join_purpose: formData.whyJoin.trim(),
-        weekly_availability: formData.availability.trim(),
+        weekly_availability: formData.availability?.trim() || "",
         previous_experience: formData.experience?.trim() || "",
         linkedin_profile: formData.linkedin?.trim() || null,
       },
