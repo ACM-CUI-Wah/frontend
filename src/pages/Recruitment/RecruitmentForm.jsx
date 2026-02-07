@@ -748,13 +748,12 @@ const RecruitmentForm = () => {
           </div>
 
           <div className="input-group">
-            <label>Weekly Availability * (max 100 chars)</label>
+            <label>Weekly Availability (max 100 chars)</label>
             <textarea
               name="availability"
               value={formData.availability}
               onChange={handleChange}
               rows="3"
-              required
               maxLength={LIMITS.availability}
               style={{ borderColor: availabilityError ? "crimson" : undefined }}
             />
