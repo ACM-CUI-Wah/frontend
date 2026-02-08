@@ -21,8 +21,8 @@ const ProfileOptions = () => {
         const res = await axiosInstance.get(`/students/${studentId}`);
         const user = res.data;
 
-        if (user?.profile_pic) {
-          setProfilePic(user.profile_pic);
+        if (user?.profile_pic_url) {
+          setProfilePic(user.profile_pic_url);
         }
       } catch (err) {
         console.error("Failed to fetch profile picture:", err?.response?.data || err.message);
