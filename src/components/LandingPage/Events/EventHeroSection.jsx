@@ -37,7 +37,7 @@ const EventHeroSection = () => {
 
       <div className="event-hero__image">
          <img 
-          src="..\..\..\assets\event-hero-illustration.png" 
+          src="../../../assets/event-hero-illustration.png" 
           alt="Interview Illustration" 
           className="hero-illustration"
         />
