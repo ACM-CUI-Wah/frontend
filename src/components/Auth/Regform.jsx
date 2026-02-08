@@ -24,13 +24,13 @@ function Regform() {
   const clubOptions = [
     { value: "CODEHUB", label: "CodeHub" },
     { value: "GRAPHICS", label: "Graphics" },
-    { value: "SOCIAL_MEDIA_MARKETING", label: "Social Media and Marketing" },
-    { value: "DECOR", label: "Registration and Decor" },
+    { value: "SOCIAL_MEDIA_MARKETING", label: "Social Media & Marketing" },
+    { value: "DECOR", label: "Decor" },
     { value: "EVENTS_LOGISTICS", label: "Events and Logistics" },
     { value: "MEDIA", label: "Media" },
   ];
 
-  const executiveTitles = ["PRESIDENT", "VICE PRESIDENT", "SECRETARY", "TREASURER"];
+  const executiveTitles = ["PRESIDENT", "VICE PRESIDENT", "SECRETARY", "TREASURER", "ADVISOR", "LEAD ADVISOR", "DIRECTOR OPERATIONS"];
   const isExecutiveTitle = executiveTitles.includes(formData.title);
 
   const [titleInputMode, setTitleInputMode] = useState(false);

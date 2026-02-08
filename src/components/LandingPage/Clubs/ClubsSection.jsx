@@ -31,7 +31,7 @@ const ClubsSection = () => {
         viewport={{ once: true }}
       >
         <h1 className="csl-clubs-title-text">CLUBS</h1>
-        
+
         <p>
           A community of innovators, designers, and problem-solvers
           building impactful technology together.
@@ -48,7 +48,7 @@ const ClubsSection = () => {
           </div>
           <h4>CODE HUB</h4>
           <p>HIntroducing the heart of innovation our Code Hub team.
-This is where curiosity meets creation. </p>
+            This is where curiosity meets creation. </p>
         </motion.div>
 
         {/* EVENTS */}
@@ -68,16 +68,16 @@ This is where curiosity meets creation. </p>
           <h4>GRAPHICS</h4>
           <p>Design is intelligence made visible and our Graphics team embodies that perfectly.</p>
         </motion.div>
-        
+
         {/* Media*/}
         <motion.div className="club-card" whileHover={hoverEffect}>
           <div className="icon-circle">
             <img src={vector5} alt="Media" />
           </div>
-          <h4>Media</h4>
+          <h4>MEDIA</h4>
           <p>Our Media team captures the essence of ACM one frame at a time.</p>
         </motion.div>
-        
+
         {/* Social MEDIA */}
         <motion.div className="club-card" whileHover={hoverEffect}>
           <div className="icon-circle">
