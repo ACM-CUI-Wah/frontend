@@ -642,7 +642,7 @@ const RecruitmentForm = () => {
               rows="4"
               required
               maxLength={1000}
-              placeholder="e.g. React, Node, Python"
+              placeholder="e.g. Decorations, Event management, Coding, Graphic Designing or Media"
               style={{ borderColor: skillsError ? "crimson" : undefined }}
             />
             {skillsError && (
