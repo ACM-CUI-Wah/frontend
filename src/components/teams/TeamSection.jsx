@@ -22,7 +22,7 @@ const teamData = [
   },
   {
     image: socialImage,
-    title: "Social Media and Marketing",
+    title: "Social Media & Marketing",
     description:
       "At ACM, our Social Media & Marketing team is the creative force behind our digital presence. From crafting strategic campaigns to designing engaging content, this team ensures that every post reflects our vision and connects with our audience. They bring ideas to life, build our community online, and make sure ACM’s story is heard across every platform."
   },
@@ -46,7 +46,7 @@ const teamData = [
   },
   {
     image: decorImage,
-    title: "Decor and Registration",
+    title: "Decor",
     description:
       "Creativity, color, and craftsmanship that’s what defines our Decor team. They transform simple spaces into inspiring experiences, giving every ACM event a unique and memorable identity. with attention to every detail, they ensure that the environment reflects the energy and vision of our society."
   }
@@ -74,6 +74,8 @@ const TeamSection = () => {
           "VICE PRESIDENT",
           "SECRETARY",
           "TREASURER",
+          "ADVISOR",
+          "LEAD ADVISOR",
           "DIRECTOR OPERATIONS",
           "COORDINATOR"
         ];

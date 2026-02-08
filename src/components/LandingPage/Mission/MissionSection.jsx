@@ -52,8 +52,6 @@ const MissionSection = () => {
               community events, we strive to inspire and uplift the next
               generation of computing professionals.
             </motion.p>
-
-
           </div>
         </div>
       </div>

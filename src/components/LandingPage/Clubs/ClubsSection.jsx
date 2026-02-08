@@ -69,23 +69,13 @@ const ClubsSection = () => {
           <p>Design is intelligence made visible and our Graphics team embodies that perfectly.</p>
         </motion.div>
 
-        {/* Media*/}
-        <motion.div className="club-card" whileHover={hoverEffect}>
-          <div className="icon-circle">
-            <img src={vector5} alt="Media" />
-          </div>
-          <h4>MEDIA</h4>
-          <p>Our Media team captures the essence of ACM one frame at a time.</p>
-        </motion.div>
-
-        {/* Social MEDIA */}
+        {/* SOCIAL MEDIA & MARKETING */}
         <motion.div className="club-card" whileHover={hoverEffect}>
           <div className="icon-circle">
             <img src={vector4} alt="Social Media & Marketing" />
           </div>
           <h4>SOCIAL MEDIA & MARKETING</h4>
-          <p>our Social Media & Marketing team is the creative force behind our digital presence.
-          </p>
+          <p>Promoting ACM through engaging digital campaigns.</p>
         </motion.div>
 
         {/* DECOR */}
@@ -97,6 +87,16 @@ const ClubsSection = () => {
           <p>Creativity, color, and craftsmanship that’s what defines our Decor team.</p>
         </motion.div>
 
+
+        {/* MEDIA */}
+        <motion.div className="club-card" whileHover={hoverEffect}>
+          <div className="icon-circle">
+            <img src={vector3} alt="Media" />
+          </div>
+          <h4>MEDIA</h4>
+          <p>Capturing and sharing ACM's story through creative content.</p>
+          <span>Explore</span>
+        </motion.div>
       </div>
 
       <div className="clubs-btn-wrapper">
