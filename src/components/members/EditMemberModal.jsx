@@ -125,7 +125,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
       Object.keys(dataToSend).forEach((key) => {
         if (key === "user" && typeof dataToSend.user === "object") {
           Object.keys(dataToSend.user).forEach((userKey) => {
-            finalFormData.append(`user[${userKey}]`, dataToSend.user[userKey]);
+            finalFormData.append(`user.${userKey}`, dataToSend.user[userKey]);
           });
         } else {
           finalFormData.append(key, dataToSend[key]);
@@ -330,3 +330,4 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
 };
 
 export default EditMemberModal;
+
