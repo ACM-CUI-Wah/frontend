@@ -47,7 +47,8 @@ const ClubsSection = () => {
             <img src={vector1} alt="Code Hub" />
           </div>
           <h4>CODE HUB</h4>
-          <p>Hands-on coding, real-world challenges, and technical growth.</p>
+          <p>HIntroducing the heart of innovation our Code Hub team.
+This is where curiosity meets creation. </p>
         </motion.div>
 
         {/* EVENTS */}
@@ -56,7 +57,7 @@ const ClubsSection = () => {
             <img src={vector2} alt="Events & Logistics" />
           </div>
           <h4>EVENTS & LOGISTICS</h4>
-          <p>Planning and executing impactful technical events.</p>
+          <p>Every great experience starts with thoughtful planning and that’s exactly what our Events team does best.</p>
         </motion.div>
 
         {/* GRAPHICS */}
@@ -65,16 +66,26 @@ const ClubsSection = () => {
             <img src={vector3} alt="Graphics" />
           </div>
           <h4>GRAPHICS</h4>
-          <p>Designing visuals that communicate ideas beautifully.</p>
+          <p>Design is intelligence made visible and our Graphics team embodies that perfectly.</p>
         </motion.div>
-
-        {/* MEDIA */}
+        
+        {/* Media*/}
         <motion.div className="club-card" whileHover={hoverEffect}>
           <div className="icon-circle">
-            <img src={vector4} alt="Media & Marketing" />
+            <img src={vector5} alt="Media" />
           </div>
-          <h4>MEDIA & MARKETING</h4>
-          <p>Promoting ACM through engaging digital campaigns.</p>
+          <h4>Media</h4>
+          <p>Our Media team captures the essence of ACM one frame at a time.</p>
+        </motion.div>
+        
+        {/* Social MEDIA */}
+        <motion.div className="club-card" whileHover={hoverEffect}>
+          <div className="icon-circle">
+            <img src={vector4} alt="Social Media & Marketing" />
+          </div>
+          <h4>SOCIAL MEDIA & MARKETING</h4>
+          <p>our Social Media & Marketing team is the creative force behind our digital presence.
+          </p>
         </motion.div>
 
         {/* DECOR */}
@@ -83,11 +94,9 @@ const ClubsSection = () => {
             <img src={vector5} alt="Decor" />
           </div>
           <h4>DECOR</h4>
-          <p>Transforming spaces to reflect creativity and innovation.</p>
+          <p>Creativity, color, and craftsmanship that’s what defines our Decor team.</p>
         </motion.div>
 
-        {/* EMPTY SLOT */}
-        <div className="club-card empty-card"></div>
       </div>
 
       <div className="clubs-btn-wrapper">
@@ -101,3 +110,4 @@ const ClubsSection = () => {
 };
 
 export default ClubsSection;
+
