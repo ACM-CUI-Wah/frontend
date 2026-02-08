@@ -43,7 +43,7 @@ const RecruitmentHero = () => {
       <div className="hero-image-container">
         
         <img 
-          src="..\..\src\assets\RecruitmentTable.png" 
+          src="../../assets/RecruitmentTable.png" 
           alt="Interview Illustration" 
           className="hero-illustration"
         />
