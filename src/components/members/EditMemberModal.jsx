@@ -200,7 +200,8 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
               >
                 <option value="">-- Select a Club --</option>
                 <option value="CODEHUB">CodeHub</option>
-                <option value="GRAPHICS">Graphics and Media</option>
+                <option value="GRAPHICS">Graphics</option>
+                <option value="MEDIA">Media</option>
                 <option value="SOCIAL_MEDIA_MARKETING">Social Media & Marketing</option>
                 <option value="DECOR">Decor</option>
                 <option value="EVENTS_LOGISTICS">Events & Logistics</option>

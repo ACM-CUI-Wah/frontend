@@ -23,7 +23,8 @@ function Regform() {
 
   const clubOptions = [
     { value: "CODEHUB", label: "CodeHub" },
-    { value: "GRAPHICS", label: "Graphics and Media" },
+    { value: "GRAPHICS", label: "Graphics" },
+    { value: "MEDIA", label: "Media" },
     { value: "SOCIAL_MEDIA_MARKETING", label: "Social Media and Marketing" },
     { value: "DECOR", label: "Decor" },
     { value: "EVENTS_LOGISTICS", label: "Events and Logistics" },
