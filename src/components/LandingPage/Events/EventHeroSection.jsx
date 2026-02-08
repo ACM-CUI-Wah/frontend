@@ -1,6 +1,6 @@
 import React from "react";
 import "./EventHeroSection.css";
-import eventHeroIllustration from "../../../assets/event-hero-illustration.png";
+import eventHeroImage from "../../../assets/event-hero-illustration.png";
 
 
 const EventHeroSection = () => {
@@ -38,8 +38,8 @@ const EventHeroSection = () => {
 
       <div className="event-hero__image">
         <img
-          src={eventHeroIllustration}
-          alt="Event Hero Illustration"
+          src={eventHeroImage}
+          alt="Event Illustration"
           className="hero-illustration"
         />
       </div>

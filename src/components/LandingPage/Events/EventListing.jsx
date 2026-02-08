@@ -52,7 +52,7 @@ const EventListing = () => {
     }
   };
 
-  // Filter logic for category
+  // Filter logic for category only
   const filteredEvents = events.filter((event) => {
     const eventTypeLabel = event.event_type?.type || event.event_type?.name || "";
 

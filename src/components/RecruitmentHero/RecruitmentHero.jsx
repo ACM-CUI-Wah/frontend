@@ -1,7 +1,7 @@
 import React from 'react';
 import './RecruitmentHero.css';
 import { Link } from 'react-router-dom';
-import recruitmentIllustration from '../../assets/RecruitmentTable.png';
+import recruitmentImage from '../../assets/RecruitmentTable.png';
 
 
 const RecruitmentHero = () => {
@@ -44,7 +44,7 @@ const RecruitmentHero = () => {
       <div className="hero-image-container">
 
         <img
-          src={recruitmentIllustration}
+          src={recruitmentImage}
           alt="Recruitment Illustration"
           className="hero-illustration"
         />
