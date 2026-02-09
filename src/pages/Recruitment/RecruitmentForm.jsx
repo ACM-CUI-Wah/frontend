@@ -9,6 +9,7 @@ const RecruitmentForm = () => {
   const alertRef = useRef(null);
 
   const [isConfirmed, setIsConfirmed] = useState(false);
+  const [isPaymentAcknowledged, setIsPaymentAcknowledged] = useState(false);
   const [progress, setProgress] = useState(0);
 
   const [sessionId, setSessionId] = useState(null);
@@ -320,6 +321,7 @@ const RecruitmentForm = () => {
       "preferredRole",
       "secondaryRole",
       "whyJoin",
+      "availability",
     ];
 
     const filledFields = requiredFields.filter(
@@ -337,6 +339,11 @@ const RecruitmentForm = () => {
 
     if (!isConfirmed) {
       setAlertAndScroll("Please confirm the information before submitting.");
+      return;
+    }
+
+    if (!isPaymentAcknowledged) {
+      setAlertAndScroll("Please acknowledge the membership fee requirement before submitting.");
       return;
     }
 
@@ -414,7 +421,7 @@ const RecruitmentForm = () => {
         preferred_role: formData.preferredRole,
         secondary_role: formData.secondaryRole,
         join_purpose: formData.whyJoin.trim(),
-        weekly_availability: formData.availability?.trim() || "",
+        weekly_availability: formData.availability.trim(),
         previous_experience: formData.experience?.trim() || "",
         linkedin_profile: formData.linkedin?.trim() || null,
       },
@@ -446,7 +453,9 @@ const RecruitmentForm = () => {
     !!phoneError ||
     !!skillsError ||
     !!courseworkError ||
-    !!availabilityError;
+    !!availabilityError ||
+    !isConfirmed ||
+    !isPaymentAcknowledged;
 
   return (
     <div className="recruitment-page">
@@ -748,12 +757,13 @@ const RecruitmentForm = () => {
           </div>
 
           <div className="input-group">
-            <label>Weekly Availability (max 100 chars)</label>
+            <label>Weekly Availability * (max 100 chars)</label>
             <textarea
               name="availability"
               value={formData.availability}
               onChange={handleChange}
               rows="3"
+              required
               maxLength={LIMITS.availability}
               style={{ borderColor: availabilityError ? "crimson" : undefined }}
             />
@@ -788,6 +798,18 @@ const RecruitmentForm = () => {
             />
             <label htmlFor="confirm">
               I confirm that all information provided is accurate
+            </label>
+          </div>
+
+          <div className="checkbox-group">
+            <input
+              type="checkbox"
+              id="paymentAcknowledge"
+              checked={isPaymentAcknowledged}
+              onChange={(e) => setIsPaymentAcknowledged(e.target.checked)}
+            />
+            <label htmlFor="paymentAcknowledge">
+              I acknowledge that if selected after the interview, I will be required to pay a membership fee of PKR 1000
             </label>
           </div>
         </div>
