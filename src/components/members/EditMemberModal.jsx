@@ -126,7 +126,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
       Object.keys(dataToSend).forEach((key) => {
         if (key === "user" && typeof dataToSend.user === "object") {
           Object.keys(dataToSend.user).forEach((userKey) => {
-            finalFormData.append(`user.${userKey}`, dataToSend.user[userKey]);
+            finalFormData.append(`user[${userKey}]`, dataToSend.user[userKey]);
           });
         } else {
           finalFormData.append(key, dataToSend[key]);
@@ -203,7 +203,9 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
                 <option value="CODEHUB">CodeHub</option>
                 <option value="GRAPHICS">Graphics</option>
                 <option value="MEDIA">Media</option>
-                <option value="SOCIAL_MEDIA_MARKETING">Social Media & Marketing</option>
+                <option value="SOCIAL_MEDIA_MARKETING">
+                  Social Media & Marketing
+                </option>
                 <option value="DECOR">Decor</option>
                 <option value="EVENTS_LOGISTICS">Events & Logistics</option>
               </select>
@@ -328,4 +330,3 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
 };
 
 export default EditMemberModal;
-
