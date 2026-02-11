@@ -132,7 +132,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
         }
       });
 
-      await axiosInstance.patch(`/students/${member.id}`, finalFormData, {
+      await axiosInstance.patch(`/students/${member.user.id}`, finalFormData, {
         headers: {
           // This overrides the default 'application/json' in your axiosInstance
           "Content-Type": "multipart/form-data",
