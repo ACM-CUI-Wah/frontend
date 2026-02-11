@@ -31,6 +31,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
   useEffect(() => {
     if (member) {
       setFormData({
+        id: member.id, // Store member ID for reference
         roll_no: member.roll_no || "",
         club: member.club || "",
         title: member.title || "",
@@ -132,7 +133,7 @@ const EditMemberModal = ({ isOpen, onClose, member, onSave }) => {
         }
       });
 
-      await axiosInstance.patch(`/students/${member.user.id}`, finalFormData, {
+      await axiosInstance.patch(`/students/${member.id}`, finalFormData, {
         headers: {
           // This overrides the default 'application/json' in your axiosInstance
           "Content-Type": "multipart/form-data",
