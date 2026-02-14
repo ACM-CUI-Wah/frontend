@@ -35,6 +35,9 @@ const RecruitmentManagement = () => {
   const [detailLoading, setDetailLoading] = useState(false);
   const [detailError, setDetailError] = useState(null);
   const [updatingStatus, setUpdatingStatus] = useState(false);
+  const [comment, setComment] = useState("");
+const [savingComment, setSavingComment] = useState(false);
+
 
   // -----------------------------
   // Helpers
@@ -270,12 +273,16 @@ const RecruitmentManagement = () => {
     setSelectedApp(null);
     setDetailError(null);
     setDetailLoading(true);
+    setComment("");
+
 
     try {
       const res = await axiosInstance.get(
         `/recruitment/application-review/${id}/`
       );
       setSelectedApp(res.data);
+     
+    setComment(res.data?.comment || res.data?.admin_comment || "");
     } catch (err) {
       const data = err.response?.data;
       const message =
@@ -288,6 +295,36 @@ const RecruitmentManagement = () => {
       setDetailLoading(false);
     }
   };
+const saveComment = async () => {
+  if (!selectedId) return;
+
+  setSavingComment(true);
+  setDetailError(null);
+
+  try {
+    await axiosInstance.patch(
+      `/recruitment/application-status/${selectedId}/`,
+      { comment } 
+    );
+
+    // Refresh details
+    const res = await axiosInstance.get(
+      `/recruitment/application-review/${selectedId}/`
+    );
+    setSelectedApp(res.data);
+    setComment(res.data?.comment || "");
+  } catch (err) {
+    const data = err.response?.data;
+    const message =
+      data?.detail ||
+      data?.message ||
+      (typeof data === "string" ? data : JSON.stringify(data)) ||
+      "Failed to save comment.";
+    setDetailError(message);
+  } finally {
+    setSavingComment(false);
+  }
+};
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -296,6 +333,9 @@ const RecruitmentManagement = () => {
     setDetailError(null);
     setDetailLoading(false);
     setUpdatingStatus(false);
+    setComment("");
+setSavingComment(false);
+
   };
 
   useEffect(() => {
@@ -757,11 +797,35 @@ const RecruitmentManagement = () => {
                       )}
                     </div>
                   </div>
+                  <div className="rm-card rm-card-full">
+  <div className="rm-card-title">📝 Comment</div>
+
+  <textarea
+    className="rm-textarea"
+    rows={4}
+    placeholder="Write a comment about this applicant..."
+    value={comment}
+    onChange={(e) => setComment(e.target.value)}
+  />
+
+  <div className="rm-comment-actions">
+    <button
+      type="button"
+      className="rm-btn rm-btn-success"
+      disabled={savingComment}
+      onClick={saveComment}
+    >
+      {savingComment ? "Saving..." : "Save Comment"}
+    </button>
+  </div>
+</div>
                 </>
               ) : (
                 <div className="rm-modal-loading">No data</div>
               )}
             </div>
+            
+
 
             {/* FOOTER */}
             <div className="rm-modal-footer">
